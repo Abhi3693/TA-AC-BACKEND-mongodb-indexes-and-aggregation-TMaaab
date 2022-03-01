@@ -1,0 +1,20 @@
+body{
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+  box-shadow: 4px 10px 8px gray;
+}
+.logo{
+  font-size: 40px;
+  font-weight: 500;
+  color: rgb(67, 181, 206);
+}

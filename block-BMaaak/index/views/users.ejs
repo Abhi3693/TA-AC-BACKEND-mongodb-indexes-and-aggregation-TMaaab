@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/common.css">
+  <link rel="stylesheet" href="/stylesheets/users.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <%- include('partials/header.ejs') %>.
+  <div class="container">
+    <h1>Listing Users</h1>
+    <ul class="user-list-holder">
+      <% if(users.length) { %>
+        <% users.forEach((user)=>{ %>
+          <li>
+            <h3> <%=user.name%></h3>
+            <a class="read-more" href="/users/<%=user._id%>">Read more</a>
+          </li>
+        <% }) %>
+      <% } else { %>
+        <h2>No any user </h2>
+      <% } %>
+    </ul>
+  </div>
+
+</body>
+</html>    
